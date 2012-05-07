@@ -1,0 +1,29 @@
+sshman 0.1.1
+README
+----------
+
+sshman is a simple ssh agent helper, along the lines of keychain.
+
+Some of sshman's features:
+- Persistant management of ssh agents
+- Will only prompt for adding ssh keys to the agent one place at any one
+  time
+- Will not slow down logging into X, the ssh password prompt will be
+  started in the background
+- Will not try to start an agent if the user is logging in via ssh
+
+To start using sshman, simply mkdir ~/.sshman as the user you wish to use
+sshman as. To stop using sshman, simply rm -rf ~/.sshman as the user you
+wish to stop using sshman as. If you don't want sshman to run ssh-add when you
+log in through X11, but wait until you open a terminal, simply create the file
+~/.sshman/requireTerminal - that will make it wait until you open a terminal
+to prompt you for the ssh key passwords.
+
+Installation instructions:
+--------------------------
+Type make as root in the directory containing sshman.
+To uninstall type make uninstall as root in the directory containing sshman.
+
+Packagers:
+----------
+make prefix=/path/to/buildroot works.

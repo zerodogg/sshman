@@ -1,0 +1,12 @@
+Version 0.1.2
+- Added CSH support
+- Improved checking for the adding lockfile
+- Improved handling of manager through ssh
+- Added support for only prompting for key passwords in terminals
+- Fixed support for zsh (improved /bin/sh compatibility)
+
+Version 0.1.1
+- Added an additional safety measure to ensure that the
+  ssh-agent will always be available for all sessions.
+- Fixed a bug that would cause the user to be prompted for
+  passwords for keys on each login
